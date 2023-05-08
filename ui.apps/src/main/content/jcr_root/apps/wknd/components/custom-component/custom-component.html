@@ -1,0 +1,29 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.all @ categories=['wknd.customlibs']}" />
+
+
+<!-- Dialog Propertes  -->
+<div class="custom-div">
+    <span> This is a custom component </span>
+    <span>Press the below button</span>
+    <button onclick="buttonScript('${properties.text @ context='scriptString'}')" class="button1">PRESS ME</button>
+</div>
+
+<div class="custom-popup">
+    <span>Yay! you pressed the button</span>
+    <span>Custom Message : ${properties.text}</span>
+    <button onclick="buttonClose()" class="custom-close-button">X</button>
+</div>
+
+<!-- Data SLY Repeat -->
+<span> Here are the other pages of at the current page path:</span>
+<br>
+<div data-sly-repeat.childPages="${currentPage.getParent.listChildren}">
+    ${childPagesList.index} : <a href="${childPages.path}.html">${childPages.name}</a>
+</div>
+
+<!-- Data Sly Set -->
+<sly data-sly-set.customvar="This is a custom variable">
+    <br>
+    <span>${customvar}</span>
+</sly>

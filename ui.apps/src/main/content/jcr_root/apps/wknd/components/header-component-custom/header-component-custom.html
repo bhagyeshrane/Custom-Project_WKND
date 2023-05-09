@@ -6,7 +6,7 @@
         <span class="custom-header-logo">WKND</span>
     </div>
     <div class="dropdown">
-        <button onclick="headerFunction()" class="dropbtn">Links</button>
+        <button onclick="headerFunction()" title="Other Page links" class="dropbtn">Links</button>
         <div id="myDropdown" class="dropdown-content">
             <sly data-sly-list.childPages="${currentPage.getParent.listChildren}">
                 <a href="${childPages.path}.html">${childPages.name}</a>

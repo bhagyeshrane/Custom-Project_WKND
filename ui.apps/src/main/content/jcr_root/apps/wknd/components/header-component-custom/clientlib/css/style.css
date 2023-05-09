@@ -57,15 +57,15 @@
 	opacity: 50%;
 	position: fixed;
 	top: 0;
-	right: 0;
 	left: 0;
-	width: 100%;
+	right: 0;
+	padding: 10px 20px;
 	min-height: fit-content;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.custom-header:hover{
+.custom-header:hover {
 	opacity: 100%;
 }
 

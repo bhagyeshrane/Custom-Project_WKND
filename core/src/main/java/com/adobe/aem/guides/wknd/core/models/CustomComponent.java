@@ -19,15 +19,18 @@ public class CustomComponent {
 
     @ValueMapValue
     private String pagePath;
-    
+
     @SlingObject
     private PageManager pagemanager;
 
     @PostConstruct
     protected void init() {
         try {
-        	Page page = pagemanager.getPage(pagePath);
-            pageTitle = page != null ? page.getTitle() != null ? page.getPageTitle() : "page title does not exist" : "page does not exist";
+            if (pagePath != null) {
+                Page page = pagemanager.getPage(pagePath);
+                pageTitle = page != null ? page.getTitle() != null ? page.getPageTitle() : "page title does not exist"
+                        : "page does not exist";
+            }
         } catch (IllegalStateException e) {
             pageTitle = "exception in sling model";
         }

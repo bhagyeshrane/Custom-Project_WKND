@@ -16,4 +16,10 @@ window.onclick = function (event) {
             }
         }
     }
+    if (!event.target.matches(['.custom-popup', '.popup-message', '.popup-custom-message', '.press-me-button'])) {
+        var popup = document.querySelector(".custom-popup");
+        if (popup.style.visibility === "visible") {
+            popup.style.visibility = "hidden";
+        }
+    }
 }

@@ -8,12 +8,17 @@
 <div class="custom-div">
     <span> This is a custom component </span>
     <span>Press the below button</span>
-    <button onclick="buttonScript('${properties.text @ context='scriptString'}')" class="button1">PRESS ME</button>
+    <button onclick="buttonScript('${properties.text @ context='scriptString'}')" class="press-me-button">PRESS
+        ME</button>
 </div>
 
 <div class="custom-popup">
-    <span>Yay! you pressed the button</span>
-    <span>Custom Message : ${properties.text}</span>
+    <span class="popup-message">Yay! you pressed the button</span>
+
+    <!-- Data Sly Test -->
+    <sly data-sly-test='${properties.text != ""}'>
+        <span class="popup-custom-message">Custom Message : ${properties.text}</span>
+    </sly>
     <button onclick="buttonClose()" class="custom-close-button">X</button>
 </div>
 

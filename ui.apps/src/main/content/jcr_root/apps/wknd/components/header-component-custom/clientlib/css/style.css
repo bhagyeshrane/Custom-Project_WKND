@@ -52,9 +52,9 @@
 
 .custom-header {
 	display: flex;
-	background-color: #fafafa;
+	background-image: linear-gradient(to right, red , yellow);
 	border-bottom: 2px solid wheat;
-	opacity: 50%;
+	opacity: 90%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -62,7 +62,8 @@
 	padding: 10px 20px;
 	min-height: fit-content;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center; 
+	z-index: 1000;
 }
 
 .custom-header:hover {
